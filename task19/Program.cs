@@ -7,25 +7,16 @@
 
 string polindrom(int chislo)     //универсальный метод определения является ли число палиндромом
 {
-    int count = 0;
     int num = chislo;
-    int i = 1;
     int rebmun = 0;
     int n = 0;
     if (chislo < 0) return ("Отрицательное число не может являться палиндромом");
     {
-        while (num != 0)
-        {
-            num = num / 10;
-            count++;
-        }
-        num = chislo;
-        while (i <= count)
+        while (chislo >0)
         {
             n = chislo % 10;
             chislo = chislo / 10;
             rebmun = rebmun * 10 + n;
-            i++;
         }
         if (num == rebmun)
         {
